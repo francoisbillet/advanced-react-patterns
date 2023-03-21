@@ -19,7 +19,7 @@ class Switch extends React.Component {
       on,
       className = '',
       'aria-label': ariaLabel,
-      onClick,
+      toggle,
       ...props
     } = this.props
     const btnClassName = [
@@ -36,7 +36,7 @@ class Switch extends React.Component {
           type="checkbox"
           checked={on}
           onChange={noop}
-          onClick={onClick}
+          onClick={toggle}
           data-testid="toggle-input"
         />
         <span className={btnClassName} {...props} />
